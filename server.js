@@ -1,10 +1,12 @@
-const express = require("express");
-const app = express();
-
-app.use(express.static(__dirname + "pages/javascript"));
+var express = require("express");
+var app = express();
+var exphs = require("express-handlebars");
+app.use(express.static(__dirname + "/pages/javascript"));
 app.use(express.static(__dirname + "/pages"));
 app.use(express.static(__dirname + "/pages/styles"));
-app.use(express.static(__dirname + "pages/images"));
+app.use(express.static(__dirname + "/pages/images"));
+app.engine("handlebars",exphs());
+app.set("view engine","handlebars");
 
 
 app.get("/",function(req,res){
