@@ -36,5 +36,7 @@ app.get("/contact",function(req,res){
 app.get("*",function(req,res){
   res.render(__dirname +"/pages/error.ejs");
 });
-app.listen(80);
+app.listen(process.env.PORT || 80, function() {
+  console.log("LISTENING!");
+});
 
