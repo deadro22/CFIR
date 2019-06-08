@@ -1,0 +1,159 @@
+html{
+  scroll-behavior:smooth;
+  overflow-x: hidden;
+}
+
+body{
+  font-size: 19px;
+  font-family: 'Roboto Mono', monospace;
+  color: #333942;
+}
+
+#mn_bg_nav{
+  height: 75px;
+  background-color:white;
+}
+
+#mn_menu{
+  background-color: white;
+  transition: border-bottom 0.5s, box-shadow 0.5s;
+}
+
+#navbarSupportedContent ul li a{
+  color:#333942;
+}
+
+#navbarSupportedContent ul li a:hover{
+  opacity: 0.6;
+}
+
+#navbarSupportedContent ul li{
+  width: 180px;
+  float: left;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+.carousel-multi-item-2 .col-md-3 {
+float: left;
+width: 25%;
+max-width: 100%; } }
+
+.carousel-multi-item-2 .card img {
+border-radius: 2px; }
+
+#mainThumbImage{
+  height: 42vw;
+}
+
+#fb_vid{
+  border-bottom: 5px #63a85a solid;
+}
+
+#fb_vd{
+  box-shadow:2px 2px 3px 1px #63a85a;
+  border-radius:5px;
+}
+
+#thb-im{
+  font-size: 40px;
+  font-weight: 800;
+}
+
+#active-mn{
+  transition: box-shadow 0.5s;
+}
+
+.img-fluid{
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 1px #63a85a;
+}
+
+#active-mn:hover{
+  box-shadow: 4px 4px 4px 3px #63a85a;
+  cursor: pointer;
+}
+
+#tr-mnD{
+  border-bottom: 5px #63a85a solid;
+  margin-right: 10px;
+  margin-left: 10px;
+  box-shadow: 0 4px 2px -2px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+#cls-s{
+  margin-right: 10px;
+  box-shadow:none;
+}
+
+#cls-s:hover{
+  opacity: 0.6;
+}
+
+#cls-s:focus {
+  outline: none;
+}
+
+
+
+.chat
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chat li
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #B3A9A9;
+}
+
+.chat li.left .chat-body
+{
+    
+}
+
+.chat li.right .chat-body
+{
+  
+}
+
+
+.chat li .chat-body p
+{
+    margin: 0;
+    color: black;
+}
+
+.panel .slidedown .glyphicon, .chat .glyphicon
+{
+    margin-right: 5px;
+}
+
+.panel-body
+{
+    overflow-y: scroll;
+    height: 700px;
+    width: 100%;
+}
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+    width: 8px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
