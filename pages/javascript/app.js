@@ -97,7 +97,7 @@ $("#resize-click").click(function(){
   generateActivities("#trpholder","الملتقى الأول للتأهيل في المالية الإسلامية","","نزل المشتل تونس","/images/trp1.JPG");
   generateActivities("#trpholder","زيارة علمية لجامعة العلوم الإقتصادية و التصرف","","بصفاقس","/images/trp2.JPG");
   generateActivities("#trpholder"," الندوة الدولية للإعجاز التشريعي في الزكاة و الأوقاف","","نزل المشتل تونس","/images/trp3.JPG");
-  generateActivities("#trpholder","ملتقى صفاقس الدولي للمالية الإسلامية","","نزل سيفاكس صفاقس","/images/trp4.jpg");
+  generateActivities("#trpholder","ملتقى صفاقس الدولي للمالية الإسلامية","","نزل سيفاكس صفاقس","/images/trp4.JPG");
   generateActivities("#trpholder","ملتقى صفاقس الدولي الخامس","","بصفاقس","/images/3.jpg");
   generateActivities("#trpholder","رحلة علمية الي دولة ماليزيا","","ماليزيا","/images/trp6.JPG");
 });
