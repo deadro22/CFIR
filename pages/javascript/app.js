@@ -32,7 +32,7 @@ $("#resize-click").click(function(){
   function generateThumb(src,alt){
     var innerMContent = '<div class="carousel-item">'+
       '<div class="view">'+
-        '<img class="d-block w-100" id="mainThumbImage" src='+ src +' alt='+alt+'>'
+        '<img class="d-block w-100" id="mainThumbImage" style="object-fit: cover;" src='+ src +' alt='+alt+'>'
         '<div class="mask rgba-black-light"></div>'+
       '</div>'+
     '</div>'
@@ -53,8 +53,8 @@ $("#resize-click").click(function(){
   function generateActivities(AttachId,ctext1,ctext2,lecturee,src){
          var innerMContent = '<div class="col-sm-6 col-md-4">'+
            '<div class="card" style="margin-bottom:4%;height:550px;">'+
-            '<div class="card-body" style="box-shadow: 0 4px 2px -2px #63a85a;background-color:white;border-bottom:5px #63a85a solid;">'+
-              '<img src='+src+' alt="" style="width:100%;box-shadow:2px 2px 3px 1px #63a85a;;border-radius:5px;margin-bottom:1%;height:350px;">'+
+            '<div class="card-body" style="box-shadow:2px 2px 3px 1px #63a85a;background-color:white;border-bottom:5px #63a85a solid;border-radius:3px;">'+
+              '<img src='+src+' alt="" class="thub-i" style="border:1px solid #63a85a;margin-bottom:2%;border-radius:3px;box-shadow:.5px .5px 3px .5px #63a85a;">'+
               '<p class="card-text" style="font-size:1.3rem;">'+ctext1+'</p>'+
               '<p class="card-text" style="font-size:1.3rem;">'+ctext2+'</p>'+
               '<p class="card-text"><small class="text-muted" style="font-size:1.3rem;">'+lecturee+'</small></p>'+

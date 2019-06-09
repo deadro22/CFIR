@@ -20,21 +20,25 @@
     aria-expanded="false" id="cls-s" style="font-size: 19px;font-weight: 800;padding:7px 0px;">
     انشطة النادي
   </button>
-  <div class="dropdown-menu dropdown-menu-left" style="border-bottom: 5px #63a85a solid;box-shadow: 0 4px 2px -2px;border-top:none;">
+  <div class="dropdown-menu dropdown-menu-left animate slideIn" style="border-top:none;border-bottom: 5px #63a85a solid;box-shadow: 0 4px 2px -2px;font-size:20px;border-radius:0px;border-bottom-left-radius:5px;border-bottom-right-radius:5px;">
     <button class="dropdown-item" type="button" onclick="window.location.href='/activities/Training'">دورات تكوينية</button>
     <button class="dropdown-item" type="button" onclick="window.location.href='/activities/lectures'">محاضرات</button>
     <button class="dropdown-item" type="button" onclick="window.location.href='/activities/Trips'">رحلات علمية</button>
   </div>
 </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" id="clb-nav" href="/banking" style="font-size:18px;margin-right:25%;">بوابة الصيرفة</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="clb-nav" href="/docs">بحوث و مقالات</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="clb-nav" href="/contact">بوابة النقاش</a>
+      <li>
+<div class="btn-group">
+  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+    aria-expanded="false" id="cls-s" style="font-size: 19px;font-weight: 800;padding:7px 0px;">
+    المزيد
+  </button>
+  <div class="dropdown-menu dropdown-menu-left animate slideIn" style="border-top:none;border-bottom: 5px #63a85a solid;box-shadow: 0 4px 2px -2px;font-size:20px;border-radius:0px;border-bottom-left-radius:5px;border-bottom-right-radius:5px;">
+    <button class="dropdown-item" type="button" onclick="window.location.href='/banking'">بوابة الصيرفة</button>
+    <button class="dropdown-item" type="button" onclick="window.location.href='/docs'">بحوث و مقالات</button>
+    <button class="dropdown-item" type="button" onclick="window.location.href='/contact'">بوابة النقاش</button>
+  </div>
+</div>
       </li>
       <li>
        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
