@@ -55,9 +55,9 @@ $("#resize-click").click(function(){
            '<div class="card" style="margin-bottom:4%;height:550px;">'+  
             '<div class="card-body" style="background-color:white;border-bottom:7px #63a85a solid;border-radius:3px;padding:0;box-shadow:4px 4px 4px #d5d9e0;">'+
               '<img src='+src+' alt="" class="thub-i" style="margin-bottom:2%;">'+
-              '<p class="card-text" style="font-size:1.3rem;">'+ctext1+'</p>'+
-              '<p class="card-text" style="font-size:1.3rem;">'+ctext2+'</p>'+
-              '<p class="card-text"><small class="text-muted" style="font-size:1.3rem;">'+lecturee+'</small></p>'+
+              '<p class="card-text" style="font-size:1.3rem;" style="margin:2px;">'+ctext1+'</p>'+
+              '<p class="card-text" style="font-size:1.3rem;" style="margin:2px;>'+ctext2+'</p>'+
+              '<p class="card-text"><small class="text-muted" style="font-size:1.3rem;margin:2px;">'+lecturee+'</small></p>'+
             '</div>'+
           '</div>'+
         '</div>'

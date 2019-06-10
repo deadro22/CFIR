@@ -38,7 +38,17 @@ body{
 .carousel-multi-item-2 .col-md-3 {
 float: left;
 width: 25%;
-max-width: 100%; } }
+max-width: 100%; }}
+
+@media (max-width: 768px) {
+  #rsp-t{
+    font-size: 25px!important;
+  }
+  #rsp-p{
+    width: 2rem!important; 
+    height: 2rem!important;
+  }
+}
 
 .carousel-multi-item-2 .card img {
 border-radius: 2px; }
@@ -206,3 +216,4 @@ border-radius: 2px; }
     -webkit-animation-name: slideIn;
     animation-name: slideIn;
   }
+
