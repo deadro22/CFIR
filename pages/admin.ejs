@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CFI | Home</title>
+    <% include header.ejs %>
+  </head>
+  <body>
+    <% include menuNav.ejs %>
+    <div class="container">
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td colspan="1">
+              <form
+                class="well form-horizontal"
+                action="/content/add"
+                method="post"
+              >
+                <h1>Add Activities</h1>
+                <fieldset>
+                  <h1></h1>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">Title</label>
+                    <div class="col-md-8 inputGroupContainer">
+                      <div class="input-group">
+                        <span class="input-group-addon"
+                          ><i class="glyphicon glyphicon-user"></i></span
+                        ><input
+                          id="fullName"
+                          name="title"
+                          placeholder="title"
+                          class="form-control"
+                          value=""
+                          type="text"
+                          autocomplete="off"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">Secondary text</label>
+                    <div class="col-md-8 inputGroupContainer">
+                      <div class="input-group">
+                        <span class="input-group-addon"
+                          ><i class="glyphicon glyphicon-home"></i></span
+                        ><input
+                          id="addressLine1"
+                          name="s_title"
+                          placeholder="Sec text"
+                          class="form-control"
+                          value=""
+                          type="text"
+                          autocomplete="off"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-8">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control" name="p_type">
+                      <option selected>Post Type</option>
+                      <option value="training">Training</option>
+                      <option value="lectures">Lectures</option>
+                      <option value="trips">Trips</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">image link</label>
+                    <div class="col-md-8 inputGroupContainer">
+                      <div class="input-group">
+                        <span class="input-group-addon"
+                          ><i class="glyphicon glyphicon-home"></i></span
+                        ><input
+                          id="addressLine2"
+                          name="image_lnk"
+                          placeholder="link/URL"
+                          class="form-control"
+                          value=""
+                          type="text"
+                          autocomplete="off"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <button type="submit" class="btn btn-primary">
+                  Add Activities
+                </button>
+              </form>
+            </td>
+            <td colspan="1">
+              <form
+                class="well form-horizontal"
+                action="/video/add"
+                method="post"
+              >
+                <h1>Add videos</h1>
+                <fieldset>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">Video title</label>
+                    <div class="col-md-8 inputGroupContainer">
+                      <div class="input-group">
+                        <span class="input-group-addon"
+                          ><i class="glyphicon glyphicon-user"></i></span
+                        ><input
+                          id="fullName"
+                          name="videoTl"
+                          placeholder="Video title"
+                          class="form-control"
+                          value=""
+                          type="text"
+                          autocomplete="off"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">Video link</label>
+                    <div class="col-md-8 inputGroupContainer">
+                      <div class="input-group">
+                        <span class="input-group-addon"
+                          ><i class="glyphicon glyphicon-home"></i></span
+                        ><input
+                          id="addressLine1"
+                          name="VideoL"
+                          placeholder="Video link"
+                          class="form-control"
+                          value=""
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                        <label class="col-md-4 control-label">Video link</label>
+                        <div class="col-md-8 inputGroupContainer">
+                          <div class="input-group">
+                            <span class="input-group-addon"
+                              ><i class="glyphicon glyphicon-home"></i></span
+                            ><textarea
+                              id="addressLine1"
+                              name="videoDesc"
+                              placeholder="Video desc"
+                              class="form-control"
+                              value=""
+                              type="text"
+                            /></textarea>
+                          </div>
+                        </div>
+                      </div>
+                </fieldset>
+                <button type="submit" class="btn btn-primary">Add video</button>
+              </form>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <%if(err_msg != ""){%>
+      <div class="alert alert-danger alert-dismissible">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close"
+          >&times;</a
+        >
+        <strong>ERROR: </strong> <%= err_msg %>
+      </div>
+      <%}%>
+    </div>
+    <% include footer.ejs %>
+  </body>
+</html>

@@ -74,7 +74,22 @@
 
  <div class="tz-gallery">
    <div class="container-fluid">
-     <div class="row" id="videoHolder" style="margin-top:2%;">
+     <div class="row mx-auto" id="videoHolder" style="margin-top:2%;">
+      <%vids.forEach(function(vid){%>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <div class="fb-video" id="fb_vd" data-href="<%=vid.videoLink%>" data-width="500" data-show-text="false"></div>
+            <div class="caption" style="margin-top:20px;">
+            <h2>
+                <%=vid.videoTitle%>
+            </h2>
+            <p style="font-size:20px;">
+                <%=vid.videoDescription%>
+            </p>
+            </div>
+            </div>
+            </div>
+            <%})%>
        <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.3"></script>
 

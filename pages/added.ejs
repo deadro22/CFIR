@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>CFI | Training courses</title>
+    <% include header.ejs %>
+  </head>
+  <body>
+    <% include menuNav.ejs %>
+
+    <div class="card text-center">
+      <div
+        class="card-header"
+        style="border-bottom:5px #63a85a solid;font-size:30px;font-weight:800;"
+      >
+        <%= svd.dt_type%>
+      </div>
+      <div class="tz-gallery">
+        <div class="container-fluid">
+          <div
+            class="row"
+            style="margin-bottom:1%;margin-top: 1%;"
+            id="trholder"
+          >
+            <div class="col-sm-6 col-md-4">
+              <div class="card" style="margin-bottom:4%;height:550px;">
+                <div
+                  class="card-body"
+                  style="background-color:white;border-bottom:7px #63a85a solid;border-radius:3px;padding:0;box-shadow:4px 4px 4px #d5d9e0;"
+                >
+                  <img
+                    src="<%= svd.image%>"
+                    alt=""
+                    class="thub-i"
+                    style="margin-bottom:2%;"
+                  />
+                  <p
+                    class="card-text"
+                    style="font-size:1.3rem;"
+                    style="margin:2px;"
+                  >
+                    <%= svd.f_text%>
+                  </p>
+                  <p
+                    class="card-text"
+                    style="font-size:1.3rem;"
+                    style="margin:2px;"
+                  ></p>
+                  <p class="card-text">
+                    <small
+                      class="text-muted"
+                      style="font-size:1.3rem;margin:2px;"
+                      ><%= svd.s_text%></small
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <% include footer.ejs %>
+  </body>
+</html>
