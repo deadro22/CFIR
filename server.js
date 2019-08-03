@@ -28,7 +28,7 @@ app.use(function(req, res, next) {
 });
 mongoose
   .connect(
-    "mongodb+srv://CFIDB:vJTc3jfZpddtsC0f@cluster0-sryuk.mongodb.net/test?retryWrites=true&w=majority",
+    "mongodb://heroku_bf88kghv:vehv4oianul506nrhl4u0d3kfk@ds261096.mlab.com:61096/heroku_bf88kghv",
     { useNewUrlParser: true }
   )
   .then(function() {
