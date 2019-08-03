@@ -56,7 +56,17 @@ app.get(["/", "/home"], function(req, res) {
 });
 app.get("/activities/:dt_type", function(req, res) {
   webdats.find({ dt_type: req.params.dt_type }).then(function(wb_data) {
-    res.render(__dirname + "/pages/Training.ejs", { wb_data });
+    var re_type = "";
+    if (req.params.dt_type == "training") {
+      re_type = "دورات تكوينية";
+      res.render(__dirname + "/pages/Training.ejs", { wb_data, re_type });
+    } else if (req.params.dt_type == "trips") {
+      re_type = "رحلات علمية";
+      res.render(__dirname + "/pages/Training.ejs", { wb_data, re_type });
+    } else if (req.params.dt_type == "lectures") {
+      re_type = "محاضرات";
+      res.render(__dirname + "/pages/Training.ejs", { wb_data, re_type });
+    }
   });
 });
 
