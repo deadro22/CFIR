@@ -79,6 +79,9 @@ app.get("/docs", function(req, res) {
 app.get("/contact", function(req, res) {
   res.render(__dirname + "/pages/progress.ejs");
 });
+app.get("/www.", function(req, res) {
+  res.redirect("/home");
+});
 app.get("/admin/dashboard/post/:code", function(req, res) {
   var ac_code = "z70401vYsM";
   if (req.params.code == ac_code) {
