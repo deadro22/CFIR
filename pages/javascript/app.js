@@ -1,8 +1,6 @@
 $(function() {
   //chat
   //web work
-  $("body").attr("oncontextmenu", "return false");
-
   $(window).scroll(function() {
     if ($(window).scrollTop() >= 50) {
       $("#mn_menu").css("box-shadow", "2px 2px 2px 1px #63a85a");
@@ -12,7 +10,7 @@ $(function() {
       $("#mn_menu").css("border-bottom", "");
     }
   });
-
+  $("body").attr("oncontextmenu", "return false");
   $("#clb-nav").click(function() {
     $("#clb-nav").css("opacity", "0.6");
   });
