@@ -129,6 +129,36 @@ app.post("/video/add", function(req, res) {
     });
   }
 });
+app.post("/content/delete", function(req, res) {
+  if (!req.body.ContentTl || !req.body.p_type) {
+    req.flash("err_msg", "Field Required");
+    res.redirect("back");
+  } else {
+    webdats
+      .findOneAndDelete({
+        dt_type: req.body.p_type,
+        f_text: req.body.ContentTl
+      })
+      .then(function(c_data) {
+        res.redirect("/activities/" + req.body.p_type);
+      });
+  }
+});
+app.post("/video/delete", function(req, res) {
+  if (!req.body.videoTl) {
+    req.flash("err_msg", "Field Required");
+    res.redirect("back");
+  } else {
+    webvids
+      .findOneAndDelete({
+        videoTitle: req.body.videoTl
+      })
+      .then(function(c_data) {
+        res.redirect("/home");
+      });
+  }
+});
+
 app.listen(process.env.PORT || 80, function() {
   console.log("LISTENING!");
 });

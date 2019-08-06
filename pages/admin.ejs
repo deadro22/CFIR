@@ -59,7 +59,7 @@
                   <div class="form-group col-md-8">
                     <label for="inputState">State</label>
                     <select id="inputState" class="form-control" name="p_type">
-                      <option selected>Post Type</option>
+                      <option selected disabled>Post Type</option>
                       <option value="training">Training</option>
                       <option value="lectures">Lectures</option>
                       <option value="trips">Trips</option>
@@ -88,6 +88,39 @@
                   Add Activities
                 </button>
               </form>
+              <form action="/content/delete" method="post">
+                <h1 style="margin-top:20px">Delete a content</h1>
+                <fieldset>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">Content title</label>
+                    <div class="col-md-8 inputGroupContainer">
+                      <div class="input-group">
+                        <span class="input-group-addon"
+                          ><i class="glyphicon glyphicon-user"></i></span
+                        ><input
+                          id="fullName"
+                          name="ContentTl"
+                          placeholder="Content title"
+                          class="form-control"
+                          value=""
+                          type="text"
+                          autocomplete="off"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-8">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control" name="p_type">
+                      <option selected disabled>Post Type</option>
+                      <option value="training">Training</option>
+                      <option value="lectures">Lectures</option>
+                      <option value="trips">Trips</option>
+                    </select>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Delete</button>
+                </fieldset>
+              </form> 
             </td>
             <td colspan="1">
               <form
@@ -152,6 +185,30 @@
                 </fieldset>
                 <button type="submit" class="btn btn-primary">Add video</button>
               </form>
+              <form action="/video/delete" method="post">
+                <h1 style="margin-top:20px">Delete a video</h1>
+                <fieldset>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label">Video title</label>
+                    <div class="col-md-8 inputGroupContainer">
+                      <div class="input-group">
+                        <span class="input-group-addon"
+                          ><i class="glyphicon glyphicon-user"></i></span
+                        ><input
+                          id="fullName"
+                          name="videoTl"
+                          placeholder="Video title"
+                          class="form-control"
+                          value=""
+                          type="text"
+                          autocomplete="off"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Delete</button>
+                </fieldset>
+              </form> 
             </td>
           </tr>
         </tbody>
