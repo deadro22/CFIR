@@ -10,7 +10,6 @@ $(function() {
       $("#mn_menu").css("border-bottom", "");
     }
   });
-  $("body").attr("oncontextmenu", "return false");
   $("#clb-nav").click(function() {
     $("#clb-nav").css("opacity", "0.6");
   });
