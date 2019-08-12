@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const flash = require("connect-flash");
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 app.use(express.static(__dirname + "/javascript"));
 app.use(express.static(__dirname + "/pages"));
