@@ -32,9 +32,7 @@ app.use(function(req, res, next) {
 
 mongoose
   .connect(
-    "mongodb://heroku_bf88kghv:" +
-      process.env.MONGO_PASS +
-      "@ds261096.mlab.com:61096/heroku_bf88kghv",
+    "mongodb://heroku_bf88kghv:vehv4oianul506nrhl4u0d3kfk@ds261096.mlab.com:61096/heroku_bf88kghv",
     { useNewUrlParser: true }
   )
   .then(function() {
