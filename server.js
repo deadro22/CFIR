@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express");
 const app = express();
 const exphs = require("express-handlebars");
@@ -6,6 +5,7 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const flash = require("connect-flash");
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 app.use(express.static(__dirname + "/javascript"));
 app.use(express.static(__dirname + "/pages"));
@@ -20,14 +20,13 @@ app.use(
     secret: "_5%QRfY[&P=!/83#XVY@I:y^9yg)zn",
     resave: false,
     saveUninitialized: false,
-    cookie: { httpOnly: true, secure: process.env.NODE_ENV === "production" }
+    cookie: { httpOnly: true, secure: true }
   })
 );
 app.use(flash());
 app.use(function(req, res, next) {
   res.locals.err_msg = req.flash("err_msg");
   res.locals.lerr_msg = req.flash("lerr_msg");
-  res.locals.l_user = req.userData;
   next();
 });
 
