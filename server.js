@@ -91,7 +91,7 @@ app.get(["/", "/home"], function(req, res) {
     res.render(__dirname + "/pages/home.ejs", { vids });
   });
 });
-app.get("/activities/:dt_type", function(req, res) {
+app.get("/activities/:dt_type", checkAuth, function(req, res) {
   webdats.find({ dt_type: req.params.dt_type }).then(function(wb_data) {
     if (wb_data != "") {
       var re_type =
@@ -111,7 +111,7 @@ app.get("/docs", function(req, res) {
   res.render(__dirname + "/pages/progress.ejs");
 });
 app.get("/forum", function(req, res) {
-  res.render(__dirname + "/pages/progress.ejs");
+  res.render(__dirname + "/pages/forum.ejs");
 });
 app.get("/www.", function(req, res) {
   res.redirect("/home");
