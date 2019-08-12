@@ -4,6 +4,7 @@ const exphs = require("express-handlebars");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const flash = require("connect-flash");
+const jwt = require("jsonwebtoken");
 
 app.use(express.static(__dirname + "/javascript"));
 app.use(express.static(__dirname + "/pages"));
@@ -17,8 +18,8 @@ app.use(
   session({
     secret: "_5%QRfY[&P=!/83#XVY@I:y^9yg)zn",
     resave: false,
-    saveUninitialized: true,
-    cookie: { secure: false }
+    saveUninitialized: false,
+    cookie: { httpOly: true, secure: process.env.NODE_ENV === "production" }
   })
 );
 app.use(flash());
@@ -45,6 +46,17 @@ const webvid = mongoose.Schema({
   videoTitle: { type: String, required: true },
   videoLink: { type: String, required: true },
   videoDescription: { type: String, required: true }
+});
+const chatrooms = mongoose.Schema({
+  room_id: { type: String, required: true },
+  room_name: { type: String, required: true },
+  room_owner: { type: String, required: true },
+  room_messages: [
+    {
+      message: { type: String },
+      st_by: { type: String }
+    }
+  ]
 });
 const webdats = mongoose.model("webdt", webdt);
 const webvids = mongoose.model("webvid", webvid);
@@ -76,8 +88,8 @@ app.get("/banking", function(req, res) {
 app.get("/docs", function(req, res) {
   res.render(__dirname + "/pages/progress.ejs");
 });
-app.get("/contact", function(req, res) {
-  res.render(__dirname + "/pages/progress.ejs");
+app.get("/forum", function(req, res) {
+  res.render(__dirname + "/pages/forum.ejs");
 });
 app.get("/www.", function(req, res) {
   res.redirect("/home");
@@ -87,11 +99,11 @@ app.get("/admin/dashboard/post/:code", function(req, res) {
   if (req.params.code == ac_code) {
     res.render(__dirname + "/pages/admin.ejs");
   } else {
-    res.render(__dirname + "/pages/error.ejs");
+    res.status(404).render(__dirname + "/pages/error.ejs");
   }
 });
 app.get("*", function(req, res) {
-  res.render(__dirname + "/pages/error.ejs");
+  res.status(404).render(__dirname + "/pages/error.ejs");
 });
 app.post("/content/add", function(req, res) {
   if (
