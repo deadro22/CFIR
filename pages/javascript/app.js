@@ -47,8 +47,4 @@ $(function() {
   generateThumb("/images/5.jpg", "5");
   generateThumb("/images/6.jpg", "6");
   generateThumb("/images/7.jpg", "7");
-  generateThumb("/images/8.jpg", "8");
-  generateThumb("/images/9.jpg", "9");
-  generateThumb("/images/10.jpg", "10");
-  generateThumb("/images/11.jpg", "11");
 });
